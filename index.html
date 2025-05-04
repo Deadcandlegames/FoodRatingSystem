@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <title>Food Rating System</title>
+</head>
+
+<body>
+  <h1 align="center"><strong>Food Rating System</strong></h1>
+  <hr>
+  <main>
+    <article>
+      <section>
+        <p align="center">
+          Vote on your favourite meal and it will then have a score. All the foods will appear on a <strong><em>ranked list below</em></strong>.</p>
+        <br>
+        <p align="center">
+          To calculate the food's overall score, enter your rating for today's food.
+        </p>
+        <br>
+        <p align="center">
+          If you want to change the background color or text size of this website click <span style="font-variant: small-caps; font-size: 30px;"><u>settings</u>.</span>
+        </p>
+        <br>
+        <p align="center">
+          <b>To load a prexisting database click below</b>
+        </p>
+        <button align="center" id="load-btn">Load</button>
+        <hr>
+      </section>
+    </article>
+    <article>
+      <ol align="center">
+        <li>Food1</li>
+        <li>Food2</li>
+        <li>Food3</li>
+        <li>Food4</li>
+        <li>Food5</li>
+        <li>Food6</li>
+        <li>Food7</li>
+        <li>Food8</li>
+        <li>Food9</li>
+        <li>Food10</li>
+      </ol>
+      <hr>
+      <br>
+    </article>
+    <article>
+      <h2 align="center">Before we start the voting process select what food you are voting on.</h2>
+      <hr>
+      <form align="center">
+        <div>
+          <label for="food" align="center">Select Food:</label><br>
+          <select id="food" name="foodselect">
+            <option value="turkey-sandwich" name="food">Turkey Sandwich</option>
+            <option value="mashed-patatos" name="food">Mashed Patatos</option>
+            <option value="chicken" name="food">Chicken</option>
+            <option value="curry" name="food">Curry</option>
+            <option value="steak" name="food">Steak</option>
+            <option value="bean-salad" name="food">Bean Salad</option>
+            <option value="garden-salad" name="food">Garden Salad</option>
+            <option value="rice" name="food">Rice</option>
+            <option value="pizza" name="food">Pizza</option>
+            ...
+          </select>
+        </div>
+        <div>
+          <p id="text"></p>
+        </div>
+      </form>
+      <hr>
+      <br>
+      <form align="center">
+        <strong>Select your rating, Person 1</strong>
+        <div>
+          <input type="radio" id="11" name="Rating1" value="1">
+          <label for="1">1</label>
+        </div>
+        <div>
+          <input type="radio" id="12" name="Rating1" value="2">
+          <label for="2">2</label>
+        </div>
+        <div>
+          <input type="radio" id="13" name="Rating1" value="3">
+          <label for="3">3</label>
+        </div>
+        <div>
+          <input type="radio" id="14" name="Rating1" value="4">
+          <label for="4">4</label>
+        </div>
+        <div>
+          <input type="radio" id="15" name="Rating1" value="5">
+          <label for="5">5</label>
+        </div>
+      </form>
+      <hr>
+      <br>
+      <form align="center">
+        <strong>Select your rating, Person 2</strong>
+        <div>
+          <input type="radio" id="21" name="Rating2" value="1">
+          <label for="1">1</label>
+        </div>
+        <div>
+          <input type="radio" id="22" name="Rating2" value="2">
+          <label for="2">2</label>
+        </div>
+        <div>
+          <input type="radio" id="23" name="Rating2" value="3">
+          <label for="3">3</label>
+        </div>
+        <div>
+          <input type="radio" id="24" name="Rating2" value="4">
+          <label for="4">4</label>
+        </div>
+        <div>
+          <input type="radio" id="25" name="Rating2" value="5">
+          <label for="5">5</label>
+        </div>
+      </form>
+      <hr>
+      <br>
+      <form align="center">
+        <strong>Select your rating, Person 3</strong>
+        <div>
+          <input type="radio" id="31" name="Rating3" value="1">
+          <label for="1">1</label>
+        </div>
+        <div>
+          <input type="radio" id="32" name="Rating3" value="2">
+          <label for="2">2</label>
+        </div>
+        <div>
+          <input type="radio" id="33" name="Rating3" value="3">
+          <label for="3">3</label>
+        </div>
+        <div>
+          <input type="radio" id="34" name="Rating3" value="4">
+          <label for="4">4</label>
+        </div>
+        <div>
+          <input type="radio" id="35" name="Rating3" value="5">
+          <label for="5">5</label>
+        </div>
+      </form>
+      <hr>
+      <br>
+      <form align="center">
+        <strong>Select your rating, Person 4</strong>
+        <div>
+          <input type="radio" id="41" name="Rating4" value="1">
+          <label for="1">1</label>
+        </div>
+        <div>
+          <input type="radio" id="42" name="Rating4" value="2">
+          <label for="2">2</label>
+        </div>
+        <div>
+          <input type="radio" id="43" name="Rating4" value="3">
+          <label for="3">3</label>
+        </div>
+        <div>
+          <input type="radio" id="44" name="Rating4" value="4">
+          <label for="4">4</label>
+        </div>
+        <div>
+          <input type="radio" id="45" name="Rating4" value="5">
+          <label for="5">5</label>
+        </div>
+        <div>
+          <button type="button" id="submit-btn">Submit Ratings</button>
+        </div>
+      </form>
+      <br>
+    </article>
+  </main>
+</body>
+
+</html>
