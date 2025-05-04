@@ -1,0 +1,28 @@
+h1 {
+  border-width: 10px;
+  border-style: solid;
+  border-color: red;
+  font-size: 92px;
+  font-family: tangerine;
+  padding: 9px;
+}
+h2 {
+  font-color: red;
+}
+p {
+  font-size: 24px;
+  font-family: Tahoma;
+}
+ol {
+  font-size: 20px;
+  font-family: Verdana;
+}
+button {
+  border-radius: 15px;
+}
+body {
+  background-color: #afb1f3;
+}
+* {
+  color: #02066f;
+}
