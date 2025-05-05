@@ -146,7 +146,15 @@ function calc() {
     `Family's least fav food is ${ratinglastIndex} with ${ratinglast} stars!`
   );
 }
-function load() {
-  let array = prompt("Enter the array below");
-  console.log(array);
+function leaderboardrefresh() {
+  let duparray = [...array];
+
+  while (duparray[4].length > 0) {
+    let a = Math.max(...duparray[4]);
+    let b = duparray[4].indexOf(a);
+    let c = `${b} with a total score of ${a}`;
+    duparray[4].splice(b, 1);
+    console.log(c);
+  }
 }
+document.addEventListener("DOMContentLoaded", leaderboardrefresh());
