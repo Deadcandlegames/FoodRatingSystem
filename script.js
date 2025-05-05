@@ -12,7 +12,6 @@ array = saveddatabase ? JSON.parse(saveddatabase) : array;
 
 //calc stuff
 document.getElementById("submit-btn").addEventListener("click", calc);
-document.getElementById("load-btn").addEventListener("click", load);
 function calc() {
   //when submit button clicked:
   let ratingperson1;
