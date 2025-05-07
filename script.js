@@ -65,16 +65,6 @@ function calc() {
     }
   }
 
-  if (
-  ratingperson1 === undefined ||
-  ratingperson2 === undefined ||
-  ratingperson3 === undefined ||
-  ratingperson4 === undefined
-) {
-  alert("Please make sure all 4 people have submitted a rating!");
-  return;
-}
-
   array[0][foodIndex] += ratingperson1; //record person 1's rating complete
 
   const ratingperson2form = document.getElementsByName("Rating2");
@@ -106,6 +96,17 @@ function calc() {
       break;
     }
   }
+
+  if (
+  ratingperson1 === undefined ||
+  ratingperson2 === undefined ||
+  ratingperson3 === undefined ||
+  ratingperson4 === undefined
+) {
+  alert("Please make sure all 4 people have submitted a rating!");
+  return;
+}
+
   
   array[3][foodIndex] += ratingperson4; //record person 4's rating complete
 
