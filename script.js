@@ -64,10 +64,15 @@ function calc() {
     }
   }
 
-  if (ratingperson1 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson1 is undefined");
-  }
+  if (
+  ratingperson1 === undefined ||
+  ratingperson2 === undefined ||
+  ratingperson3 === undefined ||
+  ratingperson4 === undefined
+) {
+  alert("Please make sure all 4 people have submitted a rating!");
+  return;
+}
 
   array[0][foodIndex] += ratingperson1; //record person 1's rating complete
 
@@ -80,11 +85,6 @@ function calc() {
     }
   }
 
-  if (ratingperson2 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson2 is undefined");
-  }
-
   array[1][foodIndex] += ratingperson2; //record person 2's rating complete
 
   const ratingperson3form = document.getElementsByName("Rating3");
@@ -95,12 +95,6 @@ function calc() {
       break;
     }
   }
-
-  if (ratingperson3 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson3 is undefined");
-  }
-
   array[2][foodIndex] += ratingperson3; //record person 3's rating complete
 
   const ratingperson4form = document.getElementsByName("Rating4");
@@ -111,12 +105,7 @@ function calc() {
       break;
     }
   }
-
-  if (ratingperson4 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson4 is undefined");
-  }
-
+  
   array[3][foodIndex] += ratingperson4; //record person 4's rating complete
 
   let foodscore =
@@ -148,6 +137,7 @@ function calc() {
 }
 function leaderboardrefresh() {
   let duparray = [...array];
+  document.getElementById("leaderboard").innerText = "";
   while (duparray[4].length > 0) {
     let a = Math.max(...duparray[4]);
     let b = duparray[4].indexOf(a);
