@@ -13,6 +13,7 @@ array = saveddatabase ? JSON.parse(saveddatabase) : array;
 //calc stuff
 document.getElementById("submit-btn").addEventListener("click", calc);
 document.getElementById("refreshbtn").addEventListener("click", leaderboardrefresh);
+document.getElementById("devtoolsbtn").addEventListener("click", devtools);
 function calc() {
   //when submit button clicked:
   let ratingperson1;
@@ -146,4 +147,26 @@ function leaderboardrefresh() {
     duparray[4][b] = -Infinity; // mark as used without breaking index mapping
     document.getElementById("leaderboard").innerText += c;
   }
+}
+function devtools() {
+let devtoolspassword = "pass@word1"
+let answer = prompt("What is the password?")
+if (answer === "pass@word1") {
+let devtools = confirm("Welcome to Dev Tools. Click ok to clear the database. Click cancel to go back")
+if (devtools) {
+    array = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 1
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 2
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 3
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 4
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // average stars
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]  // votes
+];
+alert("The leaderboard will not automaticaly refresh, you have to manualy refresh it.")
+} else {
+  alert("You have exited Dev Tools.")
+}
+} else {
+  alert("Wrong Password!")
+}
 }
