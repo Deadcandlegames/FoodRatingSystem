@@ -153,6 +153,6 @@ function leaderboardrefresh() {
     let b = duparray[4].indexOf(a);
     let c = `${b} with a total score of ${a}`;
     duparray[4].splice(b, 1);
-    document.getElementById("leaderboard").innertext += (c);
+    document.getElementById("leaderboard").innerText += (c);
   }
 }
