@@ -12,6 +12,7 @@ array = saveddatabase ? JSON.parse(saveddatabase) : array;
 
 //calc stuff
 document.getElementById("submit-btn").addEventListener("click", calc);
+document.getElementById("refreshbtn").addEventListener("click", leaderboardrefresh);
 function calc() {
   //when submit button clicked:
   let ratingperson1;
@@ -155,4 +156,3 @@ function leaderboardrefresh() {
     document.getElementById("leaderboard").innertext += (c);
   }
 }
-document.addEventListener("DOMContentLoaded", leaderboardrefresh());
