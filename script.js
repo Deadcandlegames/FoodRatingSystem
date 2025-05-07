@@ -141,8 +141,9 @@ function leaderboardrefresh() {
   while (duparray[4].length > 0) {
     let a = Math.max(...duparray[4]);
     let b = duparray[4].indexOf(a);
+    if (b === -1) break; // failsafe to prevent infinite loop
     let c = `${b} with a total score of ${a}`;
-    duparray[4].splice(b, 1);
-    document.getElementById("leaderboard").innerText += (c);
+    duparray[4][b] = -Infinity; // mark as used without breaking index mapping
+    document.getElementById("leaderboard").innerText += c;
   }
 }
