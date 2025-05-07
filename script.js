@@ -136,8 +136,8 @@ function calc() {
   );
 }
 function leaderboardrefresh() {
-  let duparray = [...array];
-  document.getElementById("leaderboard").innerText = "";
+  let duparray = JSON.parse(JSON.stringify(array));
+  document.getElementById("leaderboard").innerText = "\n";
   while (duparray[4].length > 0) {
     let a = Math.max(...duparray[4]);
     let b = duparray[4].indexOf(a);
