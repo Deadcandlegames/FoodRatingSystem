@@ -1,3 +1,4 @@
+console.log("The Dev Tools password is pass@word1")
 let array = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 1
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 2
@@ -152,7 +153,7 @@ function leaderboardrefresh() {
 function devtools() {
 let devtoolspassword = "pass@word1"
 let answer = prompt("What is the password?")
-if (answer === "pass@word1") {
+if (answer === devtoolspassword) {
 let devtools = confirm("Welcome to Dev Tools. Click ok to clear the database. Click cancel to go back")
 if (devtools) {
     array = [
