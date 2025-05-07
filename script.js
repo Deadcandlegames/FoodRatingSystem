@@ -12,6 +12,8 @@ array = saveddatabase ? JSON.parse(saveddatabase) : array;
 
 //calc stuff
 document.getElementById("submit-btn").addEventListener("click", calc);
+document.getElementById("refreshbtn").addEventListener("click", leaderboardrefresh);
+document.getElementById("devtoolsbtn").addEventListener("click", devtools);
 function calc() {
   //when submit button clicked:
   let ratingperson1;
@@ -63,10 +65,15 @@ function calc() {
     }
   }
 
-  if (ratingperson1 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson1 is undefined");
-  }
+  if (
+  ratingperson1 === undefined ||
+  ratingperson2 === undefined ||
+  ratingperson3 === undefined ||
+  ratingperson4 === undefined
+) {
+  alert("Please make sure all 4 people have submitted a rating!");
+  return;
+}
 
   array[0][foodIndex] += ratingperson1; //record person 1's rating complete
 
@@ -79,11 +86,6 @@ function calc() {
     }
   }
 
-  if (ratingperson2 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson2 is undefined");
-  }
-
   array[1][foodIndex] += ratingperson2; //record person 2's rating complete
 
   const ratingperson3form = document.getElementsByName("Rating3");
@@ -94,12 +96,6 @@ function calc() {
       break;
     }
   }
-
-  if (ratingperson3 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson3 is undefined");
-  }
-
   array[2][foodIndex] += ratingperson3; //record person 3's rating complete
 
   const ratingperson4form = document.getElementsByName("Rating4");
@@ -110,12 +106,7 @@ function calc() {
       break;
     }
   }
-
-  if (ratingperson4 === undefined) {
-    alert("Please make sure all 4 people have submitted a rating!");
-    console.log("ratingperson4 is undefined");
-  }
-
+  
   array[3][foodIndex] += ratingperson4; //record person 4's rating complete
 
   let foodscore =
@@ -146,13 +137,36 @@ function calc() {
   );
 }
 function leaderboardrefresh() {
-  let duparray = [...array];
+  let duparray = JSON.parse(JSON.stringify(array));
+  document.getElementById("leaderboard").innerText = "\n";
   while (duparray[4].length > 0) {
     let a = Math.max(...duparray[4]);
     let b = duparray[4].indexOf(a);
+    if (b === -1) break; // failsafe to prevent infinite loop
     let c = `${b} with a total score of ${a}`;
-    duparray[4].splice(b, 1);
-    document.getElementById("leaderboard").innertext += (c);
+    duparray[4][b] = -Infinity; // mark as used without breaking index mapping
+    document.getElementById("leaderboard").innerText += c;
   }
 }
-document.addEventListener("DOMContentLoaded", leaderboardrefresh());
+function devtools() {
+let devtoolspassword = "pass@word1"
+let answer = prompt("What is the password?")
+if (answer === "pass@word1") {
+let devtools = confirm("Welcome to Dev Tools. Click ok to clear the database. Click cancel to go back")
+if (devtools) {
+    array = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 1
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 2
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 3
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 4
+  [0, 0, 0, 0, 0, 0, 0, 0, 0], // average stars
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]  // votes
+];
+alert("The leaderboard will not automaticaly refresh, you have to manualy refresh it.")
+} else {
+  alert("You have exited Dev Tools.")
+}
+} else {
+  alert("Wrong Password!")
+}
+}
