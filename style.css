@@ -23,6 +23,9 @@ button {
 body {
   background-color: #afb1f3;
 }
+form {
+  text-align: center;
+}
 * {
   color: #02066f;
 }
