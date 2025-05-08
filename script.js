@@ -1,4 +1,4 @@
-console.log("The Dev Tools password is pass@word1")
+console.log(`The Dev Tools password is ${devtoolspassword}`)
 let array = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 1
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 2
