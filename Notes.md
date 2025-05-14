@@ -8,5 +8,8 @@ To create more food options multiple steps must be taken.
 
 ## Errors
 **1** - nothing
+
 **2** - javascript disabled
+
 **3** - other error
+
