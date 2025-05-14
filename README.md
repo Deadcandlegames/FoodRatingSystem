@@ -43,8 +43,6 @@ Google fonts included in CSS
 
 CSS passes WCAG AA/AAA on WebAIM Contrast Checker
 
-Now that you have searched this much you deserve the password for Dev Tools.
-The Dev Tools password is "Pass@word1"
 ________________________________________________________________________________________________________________________________________
 ## Bon Appetit!
 <img src="https://svgsilh.com/svg_v2/1667987.svg" alt="SVG &gt; food event place dining - Free SVG Image &amp; Icon. | SVG Silh"/>![image](https://github.com/user-attachments/assets/0da60db4-24cc-4d6f-a029-01582b98a19d)
