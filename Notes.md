@@ -7,9 +7,10 @@ To create more food options multiple steps must be taken.
 - add case to translate Index to food name
 
 ## Errors
-**1** - nothing
+**1** - Example
 
 **2** - javascript disabled
 
-**3** - other error
+**3** - Dev Tools Password too long
 
+**...**
