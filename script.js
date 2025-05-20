@@ -7,7 +7,7 @@ let array = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // average stars
   [0, 0, 0, 0, 0, 0, 0, 0, 0]  // votes
 ];
-
+let foodmap = ["Turkey Sandwich", "Mashed Patatos", "Chicken", "Curry", "Steak", "Bean Salad", "Rice", "Pizza"]
 let saveddatabase = localStorage.getItem("database");
 array = saveddatabase ? JSON.parse(saveddatabase) : array;
 
@@ -145,9 +145,10 @@ function leaderboardrefresh() {
     let a = Math.max(...duparray[4]);
     let b = duparray[4].indexOf(a);
     if (b === -1) break; // failsafe to prevent infinite loop
-    let c = `${b} with a total score of ${a}`;
+    let c = foodmap[b]
+    let d = `${c} with a total score of ${a}`;
     duparray[4][b] = -Infinity; // mark as used without breaking index mapping
-    document.getElementById("leaderboard").innerText += c;
+    document.getElementById("leaderboard").innerText += d;
   }
 }
 function devtools() {
