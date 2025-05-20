@@ -6,7 +6,7 @@ let array = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // average stars
   [0, 0, 0, 0, 0, 0, 0, 0, 0]  // votes
 ];
-let foodmap = ["Turkey Sandwich", "Mashed Patatos", "Chicken", "Curry", "Steak", "Bean Salad", "Rice", "Pizza"]
+let foodmap = ["Turkey Sandwich", "Mashed Patatos", "Chicken", "Curry", "Steak", "Bean Salad", "Garden Salad", "Rice", "Pizza"];
 let saveddatabase = localStorage.getItem("database");
 array = saveddatabase ? JSON.parse(saveddatabase) : array;
 
@@ -65,7 +65,10 @@ function calc() {
     }
   }
 
-  array[0][foodIndex] += ratingperson1; //record person 1's rating complete
+  if (ratingperson1 !== undefined) {
+  array[0][foodIndex] += ratingperson1;
+}
+  //record person 1's rating complete
 
   const ratingperson2form = document.getElementsByName("Rating2");
 
