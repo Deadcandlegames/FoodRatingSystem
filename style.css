@@ -28,6 +28,9 @@ body {
 form {
   text-align: center;
 }
+p, h1, h2, ol {
+  text-align: center;
+}
 * {
   color: #02066f;
 }
