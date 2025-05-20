@@ -7,7 +7,7 @@ h1 {
   padding: 9px;
 }
 h2 {
-  font-color: red;
+  color: red;
   font-family: tangerine;
   font-size: 32px;
 }
@@ -31,6 +31,8 @@ form {
 p, h1, h2, ol {
   text-align: center;
 }
+// the following * is a bad use be more spesific
 * {
   color: #02066f;
 }
+// Stylize form/inputs
