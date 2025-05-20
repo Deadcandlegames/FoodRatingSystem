@@ -1,4 +1,3 @@
-console.log(`The Dev Tools password is ${devtoolspassword}`)
 let array = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 1
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 2
@@ -151,6 +150,7 @@ function leaderboardrefresh() {
     document.getElementById("leaderboard").innerText += d;
   }
 }
+console.log(`The Dev Tools password is ${devtoolspassword}`)
 function devtools() {
 let devtoolspassword = "pass@word1"
 let answer = prompt("What is the password?")
