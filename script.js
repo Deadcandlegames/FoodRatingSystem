@@ -150,7 +150,6 @@ function leaderboardrefresh() {
     document.getElementById("leaderboard").innerText += d;
   }
 }
-console.log(`The Dev Tools password is ${devtoolspassword}`)
 function devtools() {
 let devtoolspassword = "pass@word1"
 let answer = prompt("What is the password?")
@@ -173,3 +172,4 @@ alert("The leaderboard will not automaticaly refresh, you have to manualy refres
   alert("Wrong Password!")
 }
 }
+console.log(`The Dev Tools password is ${devtoolspassword}`)
