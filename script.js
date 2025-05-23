@@ -155,6 +155,7 @@ function leaderboardrefresh() {
 }
 function devtools() {
 let devtoolspassword = "pass@word1"
+console.log(`The Dev Tools password is ${devtoolspassword}`)
 let answer = prompt("What is the password?")
 if (answer === devtoolspassword) {
 let devtools = confirm("Welcome to Dev Tools. Click ok to clear the database. Click cancel to go back")
@@ -175,4 +176,3 @@ alert("The leaderboard will not automaticaly refresh, you have to manualy refres
   alert("Wrong Password!")
 }
 }
-console.log(`The Dev Tools password is ${devtoolspassword}`)
