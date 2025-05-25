@@ -159,8 +159,9 @@ let devtoolspassword = "pass@word1"
 console.log(`The Dev Tools password is ${devtoolspassword}`)
 let answer = prompt("What is the password?")
 if (answer === devtoolspassword) {
-let devtools = confirm("Welcome to Dev Tools. Click ok to clear the database. Click cancel to go back")
-if (devtools) {
+let devtools = prompt("Welcome to Dev Tools. Type a keyword. Click cancel to go back")
+switch(devtools) {
+  case "ClearDatabase":
     array = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 1
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // person 2
@@ -169,9 +170,15 @@ if (devtools) {
   [0, 0, 0, 0, 0, 0, 0, 0, 0], // average stars
   [0, 0, 0, 0, 0, 0, 0, 0, 0]  // votes
 ];
-alert("The leaderboard will not automaticaly refresh, you have to manualy refresh it.")
-} else {
-  alert("You have exited Dev Tools.")
+    break;
+  case "Load":
+    JSON.parse(saveddatabase)
+    alert("Refresh the leaderboard")
+  case "Save":
+    localStorage.setItem("database", JSON.stringify(array))
+    alert("Databased saved")
+  default: // This acts like the "else"
+    alert("You have exited Dev Tools")
 }
 } else {
   alert("Wrong Password!")
