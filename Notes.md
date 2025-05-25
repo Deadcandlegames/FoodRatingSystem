@@ -26,3 +26,5 @@ To create more food options multiple steps must be taken.
 **8** - Google fonts wepapis not connecting
 
 **...**
+
+<img src="deadcandlegameslogo.png" alt="deadcandlegames' logo" title="DeadCandleGames' Logo">
