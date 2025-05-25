@@ -174,11 +174,14 @@ switch(devtools) {
   case "Load":
     JSON.parse(saveddatabase)
     alert("Refresh the leaderboard")
+    break;
   case "Save":
     localStorage.setItem("database", JSON.stringify(array))
     alert("Databased saved")
+    break;
   default: // This acts like the "else"
     alert("You have exited Dev Tools")
+    break;
 }
 } else {
   alert("Wrong Password!")
