@@ -25,7 +25,7 @@ Turn Javascript on or off at this link chrome://settings/content/javascript
 ________________________________________________________________________________________________________________________________________
 ## Getting Started
 
-To get started go to **----**.
+To get started go to **https://deadcandlegames.github.io/FoodRatingSystem/**.
 ________________________________________________________________________________________________________________________________________
 ## Tech Stuff
 The main languages are
@@ -38,6 +38,7 @@ Requires a JavaScript ES6 (2015)
 
 Google fonts included in CSS
 - Tangerine (Google fonts: https://fonts.google.com/specimen/Tangerine)
+  Connected through fonts.googleapis.com
 - Tahoma
 - Verdana
 
