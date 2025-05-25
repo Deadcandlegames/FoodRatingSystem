@@ -172,8 +172,12 @@ switch(devtools) {
 ];
     break;
   case "Load":
-    JSON.parse(saveddatabase);
-    alert("Refresh the leaderboard");
+    if (saveddatabase) {
+        array = JSON.parse(saveddatabase);
+        alert("Database loaded! Refresh the leaderboard.");
+    } else {
+        alert("No saved database found.");
+    }
     break;
   case "Save":
     localStorage.setItem("database", JSON.stringify(array));
