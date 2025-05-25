@@ -45,4 +45,4 @@ CSS passes WCAG AA/AAA on WebAIM Contrast Checker
 
 ________________________________________________________________________________________________________________________________________
 ## Bon Appetit!
-<img src="https://svgsilh.com/svg_v2/1667987.svg" alt="SVG &gt; food event place dining - Free SVG Image &amp; Icon. | SVG Silh"/>![image](https://github.com/user-attachments/assets/0da60db4-24cc-4d6f-a029-01582b98a19d)
+<img src="deadcandlegameslogo.svg" alt="deadcandlegames' logo" title="DeadCandleGames' Logo">
