@@ -112,7 +112,13 @@ function calc() {
 
   
   array[3][foodIndex] += ratingperson4; //record person 4's rating complete
-
+  
+<!--
+ /\_/\  
+( o.o )   
+ > ^ <     <(Meow)
+-->
+  
   let foodscore =
     Math.round(
       ((array[0][foodIndex] +
