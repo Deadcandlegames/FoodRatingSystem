@@ -142,18 +142,17 @@ function calc() {
 }
 function leaderboardrefresh() {
   let duparray = JSON.parse(JSON.stringify(array));
-  document.getElementById("leaderboard").innerText = "\n";
-for (let i = 0; i < foodmap.length; i++) {
-  if (duparray[5][i] !== 0) { // Only show foods with votes
-    let a = Math.max(...duparray[4]);
-    let b = duparray[4].indexOf(a);
-    if (b === -1) break; // failsafe to prevent infinite loop
-    let c = foodmap[b];
-    let d = `${c} with a total score of ${a}`;
-    duparray[4][b] = -Infinity; // mark as used without breaking index mapping
-    document.getElementById("leaderboard").innerText += d;
+  document.getElementById("leaderboard").innerHTML = "<br>";
+  for (let i = 0; i < foodmap.length; i++) {
+    if (duparray[5][i] !== 0) { // Only show foods with votes
+      let a = Math.max(...duparray[4]);
+      let b = duparray[4].indexOf(a);
+      let c = foodmap[b];
+      let d = `${c} with a total score of ${a}`;
+      duparray[4][b] = -Infinity;
+      document.getElementById("leaderboard").innerHTML += d + "<br>";
+    }
   }
-}
 }
 function devtools() {
 let devtoolspassword = "pass@word1"
