@@ -27,4 +27,4 @@ To create more food options multiple steps must be taken.
 
 **...**
 
-<img src="deadcandlegameslogo.png" alt="deadcandlegames' logo" title="DeadCandleGames' Logo">
+<img src="DeadCandleGamesLogo.png" alt="deadcandlegames' logo" title="DeadCandleGames' Logo">
