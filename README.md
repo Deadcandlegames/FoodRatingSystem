@@ -45,4 +45,4 @@ CSS passes WCAG AA/AAA on WebAIM Contrast Checker
 
 ________________________________________________________________________________________________________________________________________
 ## Bon Appetit!
-<img src="deadcandlegameslogo.png" alt="deadcandlegames' logo" title="DeadCandleGames' Logo">
+<img src="DeadCandleGamesLogo.png" alt="deadcandlegames' logo" title="DeadCandleGames' Logo">
