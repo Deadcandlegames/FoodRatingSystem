@@ -143,7 +143,8 @@ function calc() {
 function leaderboardrefresh() {
   let duparray = JSON.parse(JSON.stringify(array));
   document.getElementById("leaderboard").innerText = "\n";
-  while (duparray[4].length > 0) {
+for (let i = 0; i < foodmap.length; i++) {
+  if (duparray[5][i] !== 0) { // Only show foods with votes
     let a = Math.max(...duparray[4]);
     let b = duparray[4].indexOf(a);
     if (b === -1) break; // failsafe to prevent infinite loop
@@ -152,6 +153,7 @@ function leaderboardrefresh() {
     duparray[4][b] = -Infinity; // mark as used without breaking index mapping
     document.getElementById("leaderboard").innerText += d;
   }
+}
 }
 function devtools() {
 let devtoolspassword = "pass@word1"
