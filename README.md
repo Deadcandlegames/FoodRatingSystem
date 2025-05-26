@@ -27,12 +27,16 @@ ________________________________________________________________________________
 
 To get started go to **https://deadcandlegames.github.io/FoodRatingSystem/**.
 ________________________________________________________________________________________________________________________________________
+## Important
+
+**If a person is away count their vote as three. The program will not let you enter nothing.**
+________________________________________________________________________________________________________________________________________
 ## Tech Stuff
-The main languages are
+The main languages (in order) are
+- Javascript (JS)
 - Hypertext Markup Language (HTML)
-- Cascading Style Sheets (CSS)
-- Jabascript (JS)
 - Markdown Script (MD)
+- Cascading Style Sheets (CSS)
 
 Requires a JavaScript ES6 (2015)
 
