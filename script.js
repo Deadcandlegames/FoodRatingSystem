@@ -150,25 +150,6 @@ function leaderboardrefresh() {
     }
   }
 }
-function makeConclusions() {
-  let ratingfirst = Math.max(...array[4]);
-  let ratingfirstIndex = array[4].indexOf(ratingfirst);
-  let ratinglast = Math.min(...array[4]);
-  let ratinglastIndex = array[4].indexOf(ratinglast);
-  let mosteaten = Math.max(...array[5]);
-  let mosteatenIndex = array[5].indexOf(mosteaten);
-}
-function makeConclusions2(foodIndex) {
-  let ratings = [
-    array[0][foodIndex],
-    array[1][foodIndex],
-    array[2][foodIndex],
-    array[3][foodIndex]
-  ];
-  let i = Math.max(...ratings);
-  let iIndex = ratings.indexOf(i);
-  alert(`(For debugging purposes only!) Person ${iIndex + 1} voted highest with ${i} stars`);
-}
 
 function devtools() {
 let devtoolspassword = "pass@word1"
